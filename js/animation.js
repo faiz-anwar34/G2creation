@@ -50,5 +50,5 @@ function fadeOut() {
 // Call the fade in function after 0.5 second
 setTimeout(fadeIn, 500);
 // Call the fade out function after 3 seconds
-setTimeout(fadeOut, 3000);
+setTimeout(fadeOut, 2000);
 

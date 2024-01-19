@@ -60,6 +60,21 @@ nav a {
   position: relative;
   display: inline-block;
 }
+.fa {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: rgb(97, 205, 255);
+  background-color: transparent;
+  margin: 10px;
+  
+}
+.fa:hover {
+  opacity: 5;
+}
+
+
 .dropdown-content a {
 padding: 10px;
 }
@@ -101,7 +116,7 @@ nav li {
   text-align: center;
   overflow: hidden;
 }    blockquote {
-   font-size: 1.5em;
+   font-size: 16px;
    color: #333;
    font-style: italic;
  }  footer {
