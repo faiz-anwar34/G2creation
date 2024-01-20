@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About Me</title>
+    <title>About Us</title>
     <script>
       const imageContainer = document.querySelector('.image-container');
 const textOverlay = document.querySelector('.text-overlay');
@@ -21,37 +21,49 @@ window.addEventListener('resize', adjustTextOverlay);
 window.addEventListener('load', adjustTextOverlay);
     </script>
    </head>
+   <header>
+    <b><h1>TheInnovationStation</h1></b>
+</header>
 <body>
-  <div class="image-container">
-  <img src="https://th.bing.com/th/id/OIG.4LX9JlxmU8KD58jZbcM1?pid=ImgGn" alt="Image">
+  
   <div class="text-overlay">
-    <h1>About Me</h1>
+    <h1>About Us</h1>
     <h2 style="padding-left: 10px;">Greetings and thank you for visiting my website!</h2>
     <p>I am Faiz Anwar, a class 12th student who is fascinated by science and biology. My dream is to become a doctor and help people with their health issues.</p>
     <p>On this website, I will share with you my experiences and challenges of pursuing this dream, as well as some useful advice and resources that I have found helpful. I will also update you on some of the latest developments and discoveries in the medical field that I think are amazing. I hope you will find my website informative and inspiring.</p>
     <h3>Another hobby of mine is web development.</h3>
     <p>I have learned how to create websites using HTML, CSS, and JS from various online sources, and I like to try out different styles and functionalities. This website is one of my creations that showcases my skills and interests. I am very happy with the result and I hope you appreciate it as well.</p>
-    <p>If you have any questions or feedback about me or my website, please feel free to reach out to me through my contact information and follow me on social media. I would love to chat with you and get to know you better. Thank you for your time and have a wonderful day -----</p>    
+    <p>If you have any questions or feedback About Us or my website, please feel free to reach out to me through my contact information and follow me on social media. I would love to chat with you and get to know you better. Thank you for your time and have a wonderful day -----</p>    
   </div>
-</div>
 <style>.image-container {
   position: relative;
   align-items: center;
 }
-
-.image-container img {
-  width: 100%;
- border: none;
- object-fit: cover;
-  height: 100%;
-  background-repeat: no-repeat;
-background-size: cover;
-      overflow: hidden;
-   }
+body {
+   font-family: EB Garamond;
+   margin: 0;
+   padding: 0;
+   background-color: rgba(221, 104, 236, 0.5);
+   background-image: url(../imagee/about.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+header { display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 150px;}
+   header h1,.head{
+  user-select: none;
+  border: 2px solid rgb(0, 0, 0);
+   border-radius: 10px;
+   box-shadow: 5px 5px 5px rgb(117, 117, 117);
+   padding: 10px;
+  font-family: Rubik Burned;
+}
 
 .text-overlay {
   position: absolute;
-  top: 40%;
+  top: 70%;
   right: 10%;
   left: 50%;
   padding-left: 10px;
