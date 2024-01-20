@@ -2,7 +2,7 @@
 // Create the welcome message element
 const welcomeMessage = document.createElement('div');
 welcomeMessage.style.backgroundColor = 'rgba(177, 162, 202, 0.5)';
-welcomeMessage.innerHTML = '<h1 style="color: white; font-size: 25px;">Welcome to my website!</h1>';
+welcomeMessage.innerHTML = '<h1 style="color: white; font-size: 25px; user-select: none;">Welcome to my website!</h1>';
 welcomeMessage.style.width = '100%';
 welcomeMessage.style.height = '100%';
 welcomeMessage.style.position = 'absolute';
@@ -50,5 +50,5 @@ function fadeOut() {
 // Call the fade in function after 0.5 second
 setTimeout(fadeIn, 500);
 // Call the fade out function after 3 seconds
-setTimeout(fadeOut, 2000);
+setTimeout(fadeOut, 3000);
 

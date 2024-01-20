@@ -2,41 +2,74 @@
 <html>
   <head>
     <title>About Me</title>
-    <style>
-      body {
-        font: size 16px;
-        overflow: hidden;
-      }
-      .container {
-        border: 2px solid gray;
-        text-align: center;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0,0.5);
-      }
-      @media (max-width: 600px) {
+    <script>
+      const imageContainer = document.querySelector('.image-container');
+const textOverlay = document.querySelector('.text-overlay');
+
+function adjustTextOverlay() {
+  const imageRect = imageContainer.getBoundingClientRect();
+  const imageWidth = imageRect.width;
+  const imageHeight = imageRect.height;
+
+  textOverlay.style.width = `${imageWidth}px`;
+  textOverlay.style.height = `${imageHeight}px`;
+
+  textOverlay.style.fontSize = `${imageHeight * 0.1}px`;
+}
+
+window.addEventListener('resize', adjustTextOverlay);
+window.addEventListener('load', adjustTextOverlay);
+    </script>
+   </head>
+<body>
+  <div class="image-container">
+  <img src="https://th.bing.com/th/id/OIG.4LX9JlxmU8KD58jZbcM1?pid=ImgGn" alt="Image">
+  <div class="text-overlay">
+    <h1>About Me</h1>
+    <h2 style="padding-left: 10px;">Greetings and thank you for visiting my website!</h2>
+    <p>I am Faiz Anwar, a class 12th student who is fascinated by science and biology. My dream is to become a doctor and help people with their health issues.</p>
+    <p>On this website, I will share with you my experiences and challenges of pursuing this dream, as well as some useful advice and resources that I have found helpful. I will also update you on some of the latest developments and discoveries in the medical field that I think are amazing. I hope you will find my website informative and inspiring.</p>
+    <h3>Another hobby of mine is web development.</h3>
+    <p>I have learned how to create websites using HTML, CSS, and JS from various online sources, and I like to try out different styles and functionalities. This website is one of my creations that showcases my skills and interests. I am very happy with the result and I hope you appreciate it as well.</p>
+    <p>If you have any questions or feedback about me or my website, please feel free to reach out to me through my contact information and follow me on social media. I would love to chat with you and get to know you better. Thank you for your time and have a wonderful day -----</p>    
+  </div>
+</div>
+<style>.image-container {
+  position: relative;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+ border: none;
+ object-fit: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+background-size: cover;
+      overflow: hidden;
+   }
+
+.text-overlay {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  left: 50%;
+  padding-left: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+@media only screen and (max-width: 600px) {
+  .image-container img {  overflow: hidden;}
+  body {
+    font-size: 16px;
+  }
   .container {
-    padding-left: 0px;
-    padding-right: 0px;
-    overflow:hidden;
-    margin-left: 0px;
-    margin-right: 0px;
+    width: 90%;
+    margin: 0 auto;
   }
 }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>About Me</h1>
-      <h2>Greetings and thank you for visiting my website!</h2>
-<p>I am Faiz Anwar, a class 12th student who is fascinated by science and biology. My dream is to become a doctor and help people with their health issues.</p>
-<p>On this website, I will share with you my experiences and challenges of pursuing this dream, as well as some useful advice and resources that I have found helpful. I will also update you on some of the latest developments and discoveries in the medical field that I think are amazing. I hope you will find my website informative and inspiring.</p>
-<h3>Another hobby of mine is web development.</h3>
-<p>I have learned how to create websites using HTML, CSS, and JS from various online sources, and I like to try out different styles and functionalities. This website is one of my creations that showcases my skills and interests. I am very happy with the result and I hope you appreciate it as well.</p>
-<p>If you have any questions or feedback about me or my website, please feel free to reach out to me through my contact information and follow me on social media. I would love to chat with you and get to know you better. Thank you for your time and have a wonderful day -----</p>
+</style>
 
-    </div>
   </body>
 </html>
