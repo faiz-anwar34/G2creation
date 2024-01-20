@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <head>  <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
     <title>About Us</title>
     <script>
       const imageContainer = document.querySelector('.image-container');
@@ -43,7 +50,7 @@ body {
    font-family: EB Garamond;
    margin: 0;
    padding: 0;
-   background-color: rgba(221, 104, 236, 0.5);
+   background-color: rgba(239, 121, 255, 0.782);
    background-image: url(../imagee/about.jpg);
    background-repeat: no-repeat;
    background-size: cover;
@@ -61,7 +68,7 @@ header { display: flex;
   font-family: Rubik Burned;
 }
 
-.text-overlay {
+ .text-overlay {
   position: absolute;
   top: 70%;
   right: 10%;
@@ -72,13 +79,12 @@ header { display: flex;
   color: rgb(0, 0, 0);
 }
 @media only screen and (max-width: 600px) {
-  .image-container img {  overflow: hidden;}
-  body {
-    font-size: 16px;
-  }
-  .container {
-    width: 90%;
-    margin: 0 auto;
+
+}
+  @media only screen and (max-width: 600px) {
+    .text-overlay{top: 30%;
+      text-align: justify;
+      position: absolute;
   }
 }
 </style>
