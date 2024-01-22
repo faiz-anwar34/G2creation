@@ -41,90 +41,84 @@ window.addEventListener('load', adjustTextOverlay);
     <p>I have learned how to create websites using HTML, CSS, and JS from various online sources, and I like to try out different styles and functionalities. This website is one of my creations that showcases my skills and interests. I am very happy with the result and I hope you appreciate it as well.</p>
     <p>If you have any questions or feedback About Us or my website, please feel free to reach out to me through my contact information and follow me on social media. I would love to chat with you and get to know you better. Thank you for your time and have a wonderful day -----</p>    
   </div>
-  <div class="skills">
-    <h2 >My Skills</h2>
-    <svg class="skill-graph" style="border-radius: 10px;">
-      <rect class="skill-bar-html" x="0" y="0" width="80%" height="20">HTML</rect>
-      <rect class="skill-bar-css" x="0" y="30" width="60%" height="20">CSS</rect>
-      <rect class="skill-bar-js" x="0" y="60" width="20%" height="20">JS</rect>
-      <rect class="skill-bar-python" x="0" y="90" width="40%" height="20">PYTHON</rect>
-    </svg>
-    <div class="skill-labels">
-      <p>HTML: 80%</p>
-      <p>CSS: 60%</p>
-      <p>JavaScript: 20%</p>
-      <p>Python: 40%</p>
+
+    <div class="skill-graph">
+      <h2>MY SKILL GRAPH</h2>
+      <p>faizanwar23122006@gmail.com</p>
+      <ul>
+        <li>
+          <span class="skill-name">HTML</span>
+          <span class="skill-level" style="width: 40%;"></span>
+        </li>
+        <li>
+          <span class="skill-name">CSS</span>
+          <span class="skill-level" style="width: 30%;"></span>
+        </li>
+        <li>
+          <span class="skill-name">JS</span>
+          <span class="skill-level" style="width: 10%;"></span>
+        </li>
+        <li>
+          <span class="skill-name">PYTHON</span>
+          <span class="skill-level" style="width: 20%;"></span>
+        </li>
+        <li>
+          <span class="skill-name">GAMING</span>
+          <span class="skill-level" style="width: 42.5%;"></span>
+        </li>
+      </ul>
     </div>
-  </div>
-<style>.image-container {
-  position: relative;
-  align-items: center;
-}.skills {
-  margin-top: 50%;
-  text-align: center;
+    
+    <style>
+    .skill-graph {
+      background-color: transparent;
+   border: 1px rgb(0, 0, 0);box-sizing: content-box;
+   box-shadow: grey 5px 0px 5px 0px;
+      padding: 10px;
+      margin: 10px;
+      width: 400px;
+      justify-content: center;
+   align-items: center;      
+      margin-top: 43%;margin-left: 31%;
+    }
+    
+    .skill-graph h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .skill-graph p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    
+    .skill-graph ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .skill-graph li {
+      margin-bottom: 10px;
+    }
+    
+    .skill-graph .skill-name {
+      display: inline-block;
+      width: 100px;
+      font-size: 14px;
+    }
+    
+    .skill-graph .skill-level {
+      display: inline-block;
+      height: 20px;
+      background-color: #0077ff;
+      border-radius: 5px;
+    }
+    .skill-graph .skill-level:nth-child(odd) {
+      background-color: #0055cc;
+    }
   
-}
-
-.skill-graph {
-  width: 50%;
-  height: 120px;
-  margin: 0 auto;
-}
-
-.skill-bar-html {
-  fill: orange;;
-}
-.skill-bar-css {
-  fill: blue;
-}.skill-bar-js {
-  fill: yellow;
-}.skill-bar-python {
-  fill: rgb(0, 255, 187);}
-.html {
-  animation: html-animation 2s ease-in-out forwards;
-}
-
-.css {
-  animation: css-animation 2s ease-in-out forwards;
-}
-
-.js {
-  animation: js-animation 2s ease-in-out forwards;
-}
-
-.python {
-  animation: python-animation 2s ease-in-out forwards;
-}
-
-@keyframes html-animation {
-  0% { width: 0; }
-  100% { width: 80%; }
-}
-
-@keyframes css-animation {
-  0% { width: 0; }
-  100% { width: 60%; }
-}
-
-@keyframes js-animation {
-  0% { width: 0; }
-  100% { width: 20%; }
-}
-
-@keyframes python-animation {
-  0% { width: 0; }
-  100% { width: 40%; }
-}
-
-.skill-labels {
-  font-size: 14px;
-  align-items: center;
-}
-
-.skill-labels p {
-  display: inline-block;
-  margin: 0 0%;padding: 10px;
-}
+    
 body {
   font-size: 100%;
    font-family: EB Garamond;
@@ -146,7 +140,9 @@ header { display: flex;
    box-shadow: 5px 5px 5px rgb(117, 117, 117);
    padding: 10px;
   font-family: Rubik Burned;
-}
+}.image-container {
+  position: relative;
+  align-items: center;}
 
  .text2 {
   position: absolute;
@@ -177,13 +173,12 @@ box-sizing: content-box;
 margin: 0%;
 padding: auto;
 text-align: center,fixed;
-}.skills{
- position: relative;
+}.skill-graph{ position: relative;
+  text-align-last: auto;padding: 0%; margin: 0%;flex-flow: column; align-items: center; align-content: center;width: auto;justify-content: space-between;
 }
 }
-
-
 </style>
+
 
   </body>
 </html>
