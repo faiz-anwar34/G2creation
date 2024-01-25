@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions</title>
+    <h2 ><span>THE INOVATION STATION</span></h2>
+    
+</head>
+<body>
+    <h2 style="text-align: center;"><span2>Suggestion Form</span2></h2>
+    <div class="form-container">
+      <form id="feedback-form" action="send_email.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name here" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your Email here" required><br>
+        <label for="rating">Rating:</label>
+        <span class="star-rating">
+          <input type="radio" name="rating" value="1"><i></i>
+          <input type="radio" name="rating" value="2"><i></i>
+          <input type="radio" name="rating" value="3" checked><i></i>
+          <input type="radio" name="rating" value="4"><i></i>
+          <input type="radio" name="rating" value="5"><i></i>
+        </span><br><br>
+        <label for="suggestions">Suggestions:</label><br>
+        <textarea id="suggestions" name="suggestions" placeholder="suggestions and improvements" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+<style>
+body{
+  background-image:url(https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg);margin: 0;
+   padding: 0;
+background-repeat: no-repeat;
+background-size: auto,cover;
+}.form-container {
+  width: 400px;
+  font-family: Arial;
+  height: auto;
+    padding: 5px;
+    border: 2px solid whitesmoke;
+    background-image: linear-gradient(90deg, rgb(0, 255, 213), rgb(255, 255, 255));
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    overflow: hidden;
+    margin:  0 auto ;
+}
+span ,.rating{ width: 0 auto;text-align: center;
+    border: 2px solid lightgray;
+    margin: 0;
+    box-shadow: 5px 5px 5px gray;
+    user-select: none;
+}span2{
+    background-image: linear-gradient(to right, rgb(228, 255, 176), white);
+    margin: 0;
+    box-shadow: 5px 5px 5px gray;
+    user-select: none;
+}
+label {
+  display: block;
+  margin-top: 5px;
+  display: inline-block;
+}
+input[type="text"] {
+  width: 40%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+} input[type="email"]{
+    width: 60%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+} textarea{
+    width: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}select{
+    width: 20%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;}
+  @media screen and ( max-width:600px ){
+    body{
+ background-size: auto,cover;
+    }
+    
+  }
+</style>
+;
+</script>
+</body>
+</html>
