@@ -2,7 +2,7 @@
 // Create the welcome message element
 const welcomeMessage = document.createElement('div');
 welcomeMessage.style.backgroundColor = 'rgba(177, 162, 202, 0.5)';
-welcomeMessage.innerHTML = '<h1 style="color: white; font-size: 25px; user-select: none;">Welcome to my website!</h1>';
+welcomeMessage.innerHTML = '<h1 style="color: white; font-size: 25px; user-select: none;">Welcome to The website!</h1>';
 welcomeMessage.style.width = '100%';
 welcomeMessage.style.height = '100%';
 welcomeMessage.style.position = 'absolute';
