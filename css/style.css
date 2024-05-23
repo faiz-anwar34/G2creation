@@ -29,6 +29,9 @@ background-repeat: no repeat;
 background-size: cover;
 
 }
+#datetime {
+  text-align: left;
+}
 
 nav {
    background-color: #4f4d4d;
@@ -36,8 +39,8 @@ nav {
    position: relative
 }
 p{
-   padding-right: 10px;
-   padding: 5px;
+   padding-right: 5px;
+   padding: 2px;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 
 }
@@ -144,35 +147,59 @@ nav li {
    font-size: 17px;
    color: #333;
    font-style: italic;
- }  footer {
-   display: flex;
-   font-family: Arial, Helvetica, sans-serif;
-   padding: 10px;
-   background-color: #000000;
-   color: #fff;
- }
+}
  
 .Thought{
   font-size: 17-sixepx;
   padding-left: 38px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+footer {
+  background-color: #333; 
+   padding: 20px;
+    border-top: 1px solid #444; 
+   text-align: left;
+    font-size: 15px;
+    color: #fff; }
 
- footer address{
-padding: 0%;
- }
- footer ul {
-   margin: 1;
- }
- 
- footer a {
-   color: #fff;
- }  footer {
-   display: flex;
-   padding: 10px;
-   background-color:'Monochromatic';
-   color: #fff;
- }
+
+
+footer p {
+  margin: 0;
+  padding: 5px 0;
+ font-size: 15px;
+}
+
+footer a {
+  text-decoration:dotted;
+}
+
+footer a:hover {
+  text-decoration:dashed;
+}
+
+footer address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer li {
+  padding: 2px 10px;
+}
+
+footer.about-us {
+  text-align: center;
+}
+
+
  @media screen and ( max-width:600px ){
    background-image{
       overflow: hidden;
