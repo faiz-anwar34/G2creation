@@ -13,7 +13,9 @@ header h1,.head{
    border-radius: 10px;
    box-shadow: 5px 5px 5px rgb(117, 117, 117);
    padding: 10px;
-  font-family: Rubik Burned;
+   font-family: "Indie Flower", cursive;
+   font-weight: 400;
+   font-style: normal;
 }
 .head {
    text-align: center;
