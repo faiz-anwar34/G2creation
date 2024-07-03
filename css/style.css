@@ -2,6 +2,10 @@
    box-sizing: border-box;
    list-style: none;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 header { display: flex;
    justify-content: center;
    align-items: center;
@@ -36,7 +40,8 @@ background-size: cover;
 }
 
 nav {
-   background-color: #4f4d4d;
+  background-image: linear-gradient(180deg, #f2b3bc, #c8c2c8);
+
    margin: 0;
    position: relative
 }
@@ -63,6 +68,7 @@ nav a {
  .dropdown {
   position: relative;
   display: inline-block;
+
 }
 .fa {
   width: 20px;
@@ -81,21 +87,29 @@ nav a {
 
 .dropdown-content a {
 padding: 10px;
+
 }
+
+
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  font-family: Arial, Helvetica, sans-serif;
-  z-index: 1;
-  top: 100%; 
-  left: 0;
+  background-color: #dac0ff;
+  min-width: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  top: 100%; /* Position below the title */
+  transform: translateY(-20px); /* Initially hidden and slightly above */
+  opacity: 0; /* Initially transparent */
+
+
 }
+
 
 .dropdown:hover .dropdown-content {
   display: block;
   color: #0fe7ff;
+  transform: rotateX(0);
 }
 .content {
   display: flex;
@@ -139,13 +153,7 @@ nav li {
    background-size: cover;
    height: 100vh;
  }
- .notice {
-  background-color: lightblue;
-  position: relative;
-  padding: 0px;
-  text-align: center;
-  overflow: hidden;
-}    blockquote {
+   blockquote {
    font-size: 17px;
    color: #333;
    font-style: italic;
@@ -246,7 +254,6 @@ footer.about-us {
   }
 
 @media screen and (max-width: 600px) {
-  /* This is your media query for small screens */
   div.content {
     width: 100%;
     border: none;
@@ -260,3 +267,32 @@ footer.about-us {
 }
 @media screen and (max-width:600px){
 }
+/* Roll-in animation */
+@keyframes rollIn {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Roll-out animation */
+@keyframes rollOut {
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+}
+
+/* Apply the animations to an element */
+.dropdown-content {
+  animation: rollIn 0.5s ease forwards; /* Roll in on hover */
+}
+
