@@ -1,116 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suggestions</title>
-    <h2 ><span>LastCorner</span></h2>
-    
-</head>
-<body>
-    <h2 style="text-align: center;"><span2>Suggestion Form</span2></h2>
-    <div class="form-container">
-      <form id="feedback-form" action="send_email.php" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Your name here" required><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Your Email here" required><br>
-        <label for="rating">Rating:</label>
-        <span class="star-rating">
-          <input type="radio" name="rating" value="1"><i></i>
-          <input type="radio" name="rating" value="2"><i></i>
-          <input type="radio" name="rating" value="3" checked><i></i>
-          <input type="radio" name="rating" value="4"><i></i>
-          <input type="radio" name="rating" value="5"><i></i>
-        </span><br><br>
-        <label for="suggestions">Suggestions:</label><br>
-        <textarea id="suggestions" name="suggestions" placeholder="suggestions and improvements" required></textarea><br>
-        <input type="submit" value="Submit">
-    </form>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<title>Feedback Form</title>
 <style>
-body{
-  background-image:url(https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg);margin: 0;
-   padding: 0;
-background-repeat: no-repeat;
-background-size: auto,cover;
-}.form-container {
-  width: 400px;
-  font-family: Arial;
-  height: auto;
-    padding: 5px;
-    border: 2px solid whitesmoke;
-    background-image: linear-gradient(90deg, rgb(0, 255, 213), rgb(255, 255, 255));
+  body {
+    font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    background-color: #f8d7da; /* Light pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .feedback-form {
+    background-color: #ffffff; /* White form background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 300px;
+  }
+  .feedback-form input,
+  .feedback-form textarea,
+  .feedback-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px gray;
-    overflow: hidden;
-    margin:  0 auto ;
-}
-span ,.rating{ width: 0 auto;text-align: center;
-    border: 2px solid lightgray;
-    margin: 0;
-    box-shadow: 5px 5px 5px gray;
-    user-select: none;
-}span2{
-    background-image: linear-gradient(to right, rgb(228, 255, 176), white);
-    margin: 0;
-    box-shadow: 5px 5px 5px gray;
-    user-select: none;
-}
-label {
-  display: block;
-  margin-top: 5px;
-  display: inline-block;
-}
-input[type="text"] {
-  width: 40%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-} input[type="email"]{
-    width: 60%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-} textarea{
-    width: 80%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-}select{
-    width: 20%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-}
-
-input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-input[type="submit"]:hover {
-  background-color: #45a049;}
-  @media screen and ( max-width:600px ){
-    body{
- background-size: auto,cover;
-    }
-    
+    box-sizing: border-box; /* Prevents padding from affecting width */
+  }
+  .feedback-form button {
+    background-color: #ff6b81; /* Coral color */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .feedback-form button:hover {
+    opacity: 0.9;
   }
 </style>
-;
-</script>
+</head>
+<body>
+<form action="thanksyou.html">
+<div class="feedback-form">
+  <h2>Help us improve</h2>
+  <p>We value your feedback and insights. Please take a few moments to fill in this form and share your thoughts on the conference sessions and overall experience.</p>
+  <input required type="text" placeholder="Enter your name">
+  <input required type="email" placeholder="Enter your email">
+  <textarea required placeholder="Your feedback"></textarea>
+  <button>Submit</button>
+</div></form>
+
 </body>
 </html>
