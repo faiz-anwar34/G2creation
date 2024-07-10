@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 <html lang="en">
 
@@ -8,10 +10,11 @@
          <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
    <title>About Us</title>
-   </head>
    <header>
     <b><h1>LastCorner</h1></b>
 </header>
+   </head>
+ 
 <body>
   
   <div class="text2">
@@ -53,14 +56,13 @@
     
     <style>
    .skill-graph {
-  margin-top: 20px; /* Added margin top to create space between text and skill graph */
-  background-color: transparent;
+    background-color: transparent;
   border: 1px rgb(0, 0, 0);
   box-sizing: content-box;
   box-shadow: grey 5px 0px 5px 0px;
   padding: 10px;
   width: 400px;
-  margin-left: auto; /* Added to center the skill graph */
+  margin-left: auto; 
   margin-right: auto;
 }
     
@@ -104,7 +106,7 @@
 body {
   font-size: 100%;
    font-family: EB Garamond;
-   margin: 0;
+ margin-bottom: 5px;
    padding: 0;
    background-color: skyblue;
    background-image: url(../imagee/about.jpg);
@@ -129,22 +131,20 @@ header { display: flex;
   align-items: center;}
 
   .text2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
+    background-color: transparent;
+  border: 1px rgb(0, 0, 0);
+  box-sizing: content-box;
+  padding: 10px;
+  width: 600px;
+  margin-left: auto; 
+  margin-right: auto;
 }
 @media only screen and (max-width: 768px) {
  .text2 {
-    font-size: 14px;
-    padding-left: 5px; /* Reduced padding on mobile view */
+  margin-top: 10px; /* Reduced margin top on mobile view */
+    width: 90%; /* Made the skill graph wider on mobile view */
+    margin-left: auto;
+    margin-right: auto;
   }
  .skill-graph {
     margin-top: 10px; /* Reduced margin top on mobile view */
