@@ -5,27 +5,9 @@
 <html lang="en">
 
         <head>  <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-          
-    <title>About Us</title>
-    <script>
-      const imageContainer = document.querySelector('.image-container');
-const textOverlay = document.querySelector('.text2');
+         <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
-function adjustTextOverlay() {
-  const imageRect = imageContainer.getBoundingClientRect();
-  const imageWidth = imageRect.width;
-  const imageHeight = imageRect.height;
-
-  textOverlay.style.width = `${imageWidth}px`;
-  textOverlay.style.height = `${imageHeight}px`;
-
-  textOverlay.style.fontSize = `${imageHeight * 0.1}px`;
-}
-
-window.addEventListener('resize', adjustTextOverlay);
-window.addEventListener('load', adjustTextOverlay);
-    </script>
+   <title>About Us</title>
    </head>
    <header>
     <b><h1>LastCorner</h1></b>
@@ -70,17 +52,17 @@ window.addEventListener('load', adjustTextOverlay);
     </div>
     
     <style>
-    .skill-graph {
-      background-color: transparent;
-   border: 1px rgb(0, 0, 0);box-sizing: content-box;
-   box-shadow: grey 5px 0px 5px 0px;
-      padding: 10px;
-      margin: 10px;
-      width: 400px;
-      justify-content: center;
-   align-items: center;      
-      margin-top: 43%;margin-left: 31%;
-    }
+   .skill-graph {
+  margin-top: 20px; /* Added margin top to create space between text and skill graph */
+  background-color: transparent;
+  border: 1px rgb(0, 0, 0);
+  box-sizing: content-box;
+  box-shadow: grey 5px 0px 5px 0px;
+  padding: 10px;
+  width: 400px;
+  margin-left: auto; /* Added to center the skill graph */
+  margin-right: auto;
+}
     
     .skill-graph h2 {
       font-size: 20px;
@@ -146,41 +128,50 @@ header { display: flex;
   position: relative;
   align-items: center;}
 
- .text2 {
+  .text2 {
   position: absolute;
-  top: 70%;
-  right: 10%;
+  top: 50%;
   left: 50%;
-  justify-content: center;
-   align-items: center;
-  padding-left: 10px;
-  text-align: center;
   transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 16px;
-    margin: 0 10px;
-    background-attachment: fixed;
-  background-position: 50%;
-    padding: 10px;
-}.text2 {
-  position: relative;
- padding-top: 800px;
-}
-header{
-height: min-content;
-box-sizing: content-box;
-margin: 0%;
-padding: auto;
-text-align: center,fixed;
-}.skill-graph{ position: relative;
-  text-align-last: auto;padding: 0%; margin: 0%;flex-flow: column; align-items: center; align-content: center;width: auto;justify-content: space-between;
-}
+@media only screen and (max-width: 768px) {
+ .text2 {
+    font-size: 14px;
+    padding-left: 5px; /* Reduced padding on mobile view */
+  }
+ .skill-graph {
+    margin-top: 10px; /* Reduced margin top on mobile view */
+    width: 90%; /* Made the skill graph wider on mobile view */
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>
+  <script>
+    const imageContainer = document.querySelector('.image-container');
+    const textOverlay = document.querySelector('.text2');
 
+    function adjustTextOverlay() {
+      const imageRect = imageContainer.getBoundingClientRect();
+      const imageWidth = imageRect.width;
+      const imageHeight = imageRect.height;
+
+      textOverlay.style.width = `${imageWidth}px`;
+      textOverlay.style.height = `${imageHeight}px`;
+
+      textOverlay.style.fontSize = `${imageHeight * 0.1}px`;
+    }
+
+    window.addEventListener('resize', adjustTextOverlay);
+    window.addEventListener('load', adjustTextOverlay);
+  </script>
 
   </body>
 </html>

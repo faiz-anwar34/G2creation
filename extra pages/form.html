@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<title>Feedback Form</title>
-<style>
-  body {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>Form and Thank You Page</title>
+  <style>
+    body {
+      font-family: "Arsenal SC", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      background-color: #f8d7da;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+   .form-box {
     font-family: "Arsenal SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    background-color: #f8d7da; /* Light pink background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  .feedback-form {
-    background-color: #ffffff; /* White form background */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 300px;
-  }
-  .feedback-form input,
-  .feedback-form textarea,
-  .feedback-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    resize: none;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-sizing: border-box; /* Prevents padding from affecting width */
-  }
-  .feedback-form button {
-    background-color: #ff6b81; /* Coral color */
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  .feedback-form button:hover {
-    opacity: 0.9;
-  }
-</style>
+      background-color: white; /* Slightly darker pink */
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      width: 400px;
+    }
+    #submit{
+      padding:10px;
+      background-color: palevioletred;
+      color: white;width: 300px;
+      border-radius: 10px;
+      font-size: large;
+      font-family: "Arsenal SC", sans-serif;
+      gap: 10px;
+      cursor: pointer;
+    
+  
+    }
+    .form-input{
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 15px;
+      resize: none;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    .form-input:hover{
+      border: 2px solid rgb(255, 94, 244);
+    }
+#submit:hover{
+  opacity: 0.9;
+}
+  </style>
 </head>
 <body>
-<form action="thanksyou.html">
-<div class="feedback-form">
-  <h2>Help us improve</h2>
-  <p>We value your feedback and insights. Please take a few moments to fill in this form and share your thoughts on the conference sessions and overall experience.</p>
-  <input required type="text" placeholder="Enter your name">
-  <input required type="email" placeholder="Enter your email">
-  <textarea required placeholder="Your feedback"></textarea>
-  <button>Submit</button>
-</div></form>
+  <div class="form-box">
+    <form  id="myForm">
+      <h2>Help us improve</h2>
+      <p>We value your feedback and insights. Please take a few moments to fill in this form and share your thoughts on the conference sessions and overall experience.</p>
+      <input style="height: 30px;" required type="text" class="form-input" placeholder="Enter your Name">
+      <input required type="email" placeholder="Enter your Email"class="form-input">
+      <textarea required placeholder="Your Feedback" class="form-input"></textarea>
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      <button id="submit">Submit</button>
+    </form>
+  </div>
+  
+  <script>
+    const form = document.getElementById('myForm');
 
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = 'thanksyou.html';
+    });
+  </script>
 </body>
 </html>
