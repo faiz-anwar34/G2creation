@@ -1,0 +1,15 @@
+{
+  "name": "lastcorner.github.io",
+  "version": "1.0.0",
+  "description": "https://faiz-anwar34.github.io/LastCorner.github.io/  All right reserve made by my self",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/style.css -o ./css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}

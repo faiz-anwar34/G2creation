@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Voiceover Song Collection</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Black background for contrast */
+            flex-direction: column;
+        }
+        .full-screen-message {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            color: white; /* White text for contrast */
+            font-size: 2em;
+            text-align: center;
+        }
+        .fade-in {
+            opacity: 1;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+        #main-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome" class="full-screen-message">Welcome to My Voiceover Song Collection</div>
+    <div id="thanks" class="full-screen-message" style="display: none;">Thanks for visiting!</div>
+    <div id="main-content">
+        <header>
+            <h1>Your Logo or Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="extra pages/aboutus.html">About</a></li>
+                    <li><a href="extra pages/form.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home">
+            <h2>Welcome to My Voiceover Song Collection</h2>
+            <p>Explore my curated selection of voiceover songs.</p>
+        </section>
+
+        <section id="collection">
+            <h2>Song List</h2>
+            <ul>
+                <li>
+                    <h3>Husn by anuv jain</h3>
+                    <p>Description: A brief story behind the song.</p>
+                    <audio controls>
+                        <source src="./song/husnvoiceover.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <!-- Continue for more songs -->
+            </ul>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Here's a little bit about my journey and the inspiration behind these songs.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="faizanwar23122006@gmail.com">faizanwar23122006@gmail.com</a></p>
+            <p>Follow me on <a href="https://www.instagram.com/faiz_anwar34/">Social Media</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Faizanwar. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const welcome = document.getElementById('welcome');
+            const thanks = document.getElementById('thanks');
+            const mainContent = document.getElementById('main-content');
+
+            setTimeout(() => {
+                welcome.classList.add('fade-in');
+                setTimeout(() => {
+                    welcome.classList.remove('fade-in');
+                    welcome.classList.add('fade-out');
+                    setTimeout(() => {
+                        welcome.style.display = 'none';
+                        thanks.style.display = 'block';
+                        thanks.classList.add('fade-in');
+                        setTimeout(() => {
+                            thanks.classList.remove('fade-in');
+                            thanks.classList.add('fade-out');
+                            setTimeout(() => {
+                                thanks.style.display = 'none';
+                                mainContent.style.display = 'block';
+                                setTimeout(() => {
+                                    mainContent.style.opacity = '1';
+                                }, 10); // Ensure the content is visible before starting the fade-in
+                            }, 2000); // Delay to ensure the fade-out completes
+                        }, 3000); // Display thanks message for 3 seconds
+                    }, 2000); // Delay to ensure the fade-out completes
+                }, 3000); // Display welcome message for 3 seconds
+            }, 500); // Initial fade in after 0.5 seconds
+        }
+    </script>
+</body>
+</html>
