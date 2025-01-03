@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video Collection</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            border: 2px solid #00796b;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #00796b;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        main {
+            padding: 30px;
+        }
+        #video-collection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .video-item {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            width: 280px;
+        }
+        .video-item:hover {
+            transform: translateY(-10px);
+        }
+        .video-item h2 {
+            font-size: 1.3em;
+            margin: 0;
+            padding: 15px;
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+        }
+        .video-item video {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 9 / 16; /* Portrait mode for social media */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: white;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        .social-links {
+            margin: 10px 0;
+        }
+        .social-links a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LastCorner</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="extra pages/aboutus.html">About</a>
+        <a href="extra pages/form.html">Contact</a>
+    </nav>
+    <main>
+        <section id="video-collection">
+            <!-- Videos will be dynamically added here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Faizanwar/p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/faiz_anwa34" target="_blank">Facebook</a>
+            <a href="https://twitter.com/Faizanw70519907" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/faiz_anwa34" target="_blank">Instagram</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoCollection = document.getElementById('video-collection');
+            
+            const videos = [
+                { title: 'barishein', src: 'edit/barisheinEdit.mp4' },
+                { title: 'Video 2', src: 'videos/video2.mp4' },
+                { title: 'Video 3', src: 'videos/video3.mp4' }
+            ];
+            
+            videos.forEach(video => {
+                const videoItem = document.createElement('div');
+                videoItem.classList.add('video-item');
+                
+                const videoTitle = document.createElement('h2');
+                videoTitle.textContent = video.title;
+                
+                const videoElement = document.createElement('video');
+                videoElement.src = video.src;
+                videoElement.controls = true;
+                
+                videoItem.appendChild(videoTitle);
+                videoItem.appendChild(videoElement);
+                videoCollection.appendChild(videoItem);
+            });
+        });
+    </script>
+</body>
+</html>
