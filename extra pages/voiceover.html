@@ -28,6 +28,7 @@
             color: white; /* White text for contrast */
             user-select: none;
             text-align: center;
+            font-size: xx-large;
         }
         .fade-in {
             opacity: 1;
@@ -48,6 +49,7 @@
             font-style: normal;
         }
         h1 {
+            user-select: none;
             display: inline-block;
             border: 2px solid white;
             border-radius: 5px;
@@ -60,6 +62,30 @@
         a:hover {
             text-decoration: underline; /* Optional: Add underline on hover */
         }
+        audio::-webkit-media-controls-enclosure {
+    overflow: hidden;
+}
+
+#audio::-webkit-media-controls-panel {
+    width: calc(100% - 30px); /* Adjust the width to hide the download button */
+}s
+
+#audio::-webkit-media-controls-download-button {
+    display: none;
+}
+
+#audio::-webkit-media-controls-timeline {
+    width: calc(100% - 30px); /* Adjust the width to hide the download button */
+}
+
+#audio::-moz-media-controls-download-button {
+    display: none;
+}
+
+#audio::-ms-media-controls-download-button {
+    display: none;
+}
+
     </style>
 </head>
 <body>
@@ -88,7 +114,7 @@
                 <li>
                     <h3>Husn by anuv jain</h3>
                     <p>Description: A brief story behind the song.</p>
-                    <audio controls>
+                    <audio id="audio"  controls>
                         <source src="../song/husnvoiceover.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
