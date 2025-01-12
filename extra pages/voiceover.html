@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Playwrite+IS:wght@100..400&display=swap" rel="stylesheet">
     <title>Song collection</title>
@@ -51,8 +52,10 @@
         h1 {
             user-select: none;
             display: inline-block;
+            box-shadow: 0 0 10px white;
             border: 2px solid white;
             border-radius: 5px;
+            border-style: dotted;
             padding: 10px;
         }
         a {
@@ -62,29 +65,66 @@
         a:hover {
             text-decoration: underline; /* Optional: Add underline on hover */
         }
-        audio::-webkit-media-controls-enclosure {
-    overflow: hidden;
+        .audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#audio::-webkit-media-controls-panel {
-    width: calc(100% - 30px); /* Adjust the width to hide the download button */
-}s
-
-#audio::-webkit-media-controls-download-button {
-    display: none;
+#play-pause {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    background-color: transparent;
 }
 
-#audio::-webkit-media-controls-timeline {
-    width: calc(100% - 30px); /* Adjust the width to hide the download button */
+
+
+#play-pause i {
+    font-size: 16px;
 }
 
-#audio::-moz-media-controls-download-button {
-    display: none;
+#seek-bar {
+    width: 100px;
+    height: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
 }
 
-#audio::-ms-media-controls-download-button {
-    display: none;
+#seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
+
+#seek-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
 
     </style>
 </head>
@@ -114,10 +154,11 @@
                 <li>
                     <h3>Husn by anuv jain</h3>
                     <p>Description: A brief story behind the song.</p>
-                    <audio id="audio"  controls>
-                        <source src="../song/husnvoiceover.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
+                    <div class="audio-player"> 
+                        <audio id="audio" src="../song/husnvoiceover.mp3"></audio>
+                         <button id="play-pause">Play</button> 
+                         <input type="range" id="seek-bar" value="0"> 
+                        </div>
                 </li>
                 <!-- Continue for more songs -->
             </ul>
@@ -185,5 +226,28 @@ document.body.addEventListener('click', () => {
                 }, 3000); // Display welcome message for 3 seconds
             }, 500); // Initial fade in after 0.5 seconds
         }
+       //audio player 
+       const audio = document.getElementById('audio');
+const playPauseButton = document.getElementById('play-pause');
+const seekBar = document.getElementById('seek-bar');
+
+playPauseButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+    } else {
+        audio.pause();
+        playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
+    }
+});
+
+audio.addEventListener('timeupdate', () => {
+    seekBar.value = (audio.currentTime / audio.duration) * 65;
+});
+
+seekBar.addEventListener('input', () => {
+    audio.currentTime = (seekBar.value / 65) * audio.duration;
+});
+
     </script>
 </html>
