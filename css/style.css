@@ -1,301 +1,274 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-*{
-   box-sizing: border-box;
-   list-style: none;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-header { display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 150px;
-}
-header h1,.head{
-  user-select: none;
-  border: 2px solid rgb(0, 0, 0);
-   border-radius: 10px;
-   box-shadow: 5px 5px 5px rgb(117, 117, 117);
-   padding: 10px;
-   font-family: "Indie Flower", cursive;
-   font-weight: 400;
-   font-style: normal;
-}
-.head {
-   text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
-}
- 
-body{
-   font-family: EB Garamond;
-   margin: 0;
-   padding: 0;
-   background-image: url(../imagee/Untitled\ design-safeimagekit.png);
-background-repeat: no repeat;
-background-size: cover;
-
-}
-#datetime {
-  text-align: left;
+body { 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background: url(../imagee/pexels-jessbaileydesign-1097930.jpg) no-repeat center center;
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
 }
 
-nav {
-  background-image: linear-gradient(180deg, #f2b3bc, #c8c2c8);
-
-   margin: 0;
-   position: relative
-}
-p{
-   padding-right: 5px;
-   padding: 2px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-
-}
-nav a {
-   text-decoration: none;
-   padding: 20px;
-   text-align: center;
-   float: left;
-   color: white;
-}
-
- 
- .container {
-   max-width: 1200px;
-   margin: 0 auto;
-}
-
- .dropdown {
-  position: relative;
-  display: inline-block;
-
-}
-.fa {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  color: rgb(97, 205, 255);
-  background-color: transparent;
-  margin: 10px;
+@media (max-width: 768px) {
+  body {
+    background: url(../imagee/pexels-jessbaileydesign-1097930.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  
   
 }
-.fa:hover {
-  opacity: 5;
+
+@media (max-width: 480px) {
+  body {
+    background: url(../imagee/pexels-jessbaileydesign-1097930.jpg) no-repeat center center;
+    background-size: cover; /* Ensures the image fits within the screen on very small devices */
+    background-attachment: scroll; /* Prevents issues with fixed backgrounds on mobile */
+  }
+}@media (max-width: 480px) {
+  .footer {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    padding: 15px 5px; /* Reduce padding for smaller screens */
+margin-bottom: 0%;
+  }
 }
 
-
-.dropdown-content a {
-padding: 10px;
-
-}
-
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #dac0ff;
-  min-width: 120px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  top: 100%; /* Position below the title */
-  transform: translateY(-20px); /* Initially hidden and slightly above */
-  opacity: 0; /* Initially transparent */
-
-
-}
-
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  color: #0fe7ff;
-  transform: rotateX(0);
-}
-.content {
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  color: #fff;
   display: flex;
-  justify-content: space-around;
-}
-
-.python, .javascript {
-  border: 1px solid rgb(230, 230, 230);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 17px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px rgb(117, 117, 117);
-  padding-left: 20px;
-  float: right;
-}
-
-.rounded {
-  border-radius: 10px;
-  user-select: none;
-  width: 250px;
-  padding-right: 20px;
-  height: 250px;
-  float: left;padding-bottom: 20px;
-}
-
-
-
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; user-select: none;
-}
-
-nav li {
-  display: inline-block;
-}
- section{
-   background: url(img,png);
-   background-position: center;
-   background-size: cover;
-   height: 100vh;
- }
-   blockquote {
-   font-size: 17px;
-   color: #333;
-   font-style: italic;
-}
- 
-.Thought{
-  font-size: 17-sixepx;
-  padding-left: 38px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-footer {
-  background-color: #333; 
-   padding: 20px;
-    border-top: 1px solid #444; 
-   text-align: left;
-    font-size: 15px;
-    color: #fff; }
-
-
-
-footer p {
-  margin: 0;
-  padding: 5px 0;
- font-size: 15px;
-}
-
-footer a {
-  text-decoration:dotted;
-}
-
-footer a:hover {
-  text-decoration:dashed;
-}
-
-footer address {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 10;
+  transition: transform 1s ease;
 }
 
-footer ul {
+.welcome-screen.hidden {
+  transform: translateY(-100%);
+}
+
+.welcome-screen p:first-of-type {
+  font-size: 1.5rem; /* "Welcome To" font size */
+  margin: 0;
+  opacity: 1; /* No fade effect */
+  transform: none; /* No animation */
+}
+
+.welcome-screen h1 {
+  font-size: 4rem; /* Larger font size for G²Creations */
+  margin: 10px 0 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.welcome-screen p:last-of-type {
+  font-size: 1.8rem; /* Slogan font size */
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.5s; /* Delayed fade-up for the slogan */
+}
+
+.view-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #777;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content {
+  display: none;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  padding-bottom: 150px; 
+  overflow-y: hidden;
+}
+
+.main-content.visible {
+  display: block;
+}
+
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+.nav-menu.visible {
+  display: block; /* Show when the welcome screen is hidden */
+}
+
+.nav-menu .line {
+  width: 30px;
+  height: 4px;
+  background-color: #000000;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu:hover .line {
+  background-color: #777;
+}
+
+.nav-slide {
+  position: fixed;
+  top: 0;
+  left: -240px; /* Fully hide the slide */
+  width: 200px;
+  height: 100%;
+  background-color: #444;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 25; /* Ensure it stays below the nav-menu */
+}
+
+/* Keep the nav-slide open when hovering over either the nav-menu or nav-slide */
+.nav-menu:hover + .nav-slide,
+.nav-slide:hover {
+  left: 0;
+}
+
+.nav-slide ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.nav-slide ul li {
+  margin: 15px 0;
+}
+
+.nav-slide ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-slide ul li a:hover {
+  text-decoration: underline;
+}
+.banner {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 20px auto;
+width: 80%;
+max-width: 800px;
+perspective: 1000px; /* For 3D effect */
+}
+
+.banner img {
+width: 100%;
+height: auto;
+border-radius: 15px;
+box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5);
+
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 20px 10px;
+font-family: Arial, sans-serif;
+font-size: 0.9rem;
+position:relative; /* Sticks the footer to the bottom */
+bottom: 0;
+left: 0;
+width: 100%;
+z-index: 10;
+display: none; /* Initially hidden */
+}
+
+.footer a {
+color: #00bcd4;
+text-decoration: none;
+}
+
+.footer a:hover {
+text-decoration: underline;
+}
+
+.main-content.visible + .footer {
+  display: block; /* Show the footer when the main content is visible */
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
   display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * 4); /* Adjust based on the number of images */
 }
 
-footer li {
-  padding: 2px 10px;
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
 }
 
-footer.about-us {
-  text-align: center;
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
 }
 
-
- @media screen and ( max-width:600px ){
-   background-image{
-      overflow: hidden;
-   }
-   }
-   @media screen and ( max-width:600px ){
-      .notice{
-         padding: 0;
-         margin-top: 0%;
-      
-      }
-   }
-   @media screen and (max-width:600px){
-      #suggestion-form input[type="text"]{
-     width: 40%;
-      }
-    }
-    @media screen and (max-width:600px){
-     #suggestion-form input[type="email"] {
-     width: 60%;
-      }
-     
-    }@media screen and (max-width:600px){
-      #suggestion-form textarea{
-        width: 80%;
-        height: 60%;
-      }
-   }
- 
-@media screen and ( max-width:600px ){
-   nav a {
-      padding: 5px;
-      padding-top: 5px;}
-
-}
-@media screen and (max-width:600px
-){
-   p {
-      padding: 5px;
-      text-indent: 2%;
-   }
-  }
-
-@media screen and (max-width: 600px) {
-  div.content {
-    width: 100%;
-    border: none;
-  }
+.prev-btn {
+  left: 10px;
 }
 
-@media screen and (max-width:600px){
-
-}
-@media screen and (max-width:600px){
-}
-@media screen and (max-width:600px){
-}
-/* Roll-in animation */
-@keyframes rollIn {
-  0% {
-      transform: translateY(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateY(0);
-      opacity: 1;
-  }
+.next-btn {
+  right: 10px;
 }
 
-/* Roll-out animation */
-@keyframes rollOut {
-  100% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-  0% {
-      transform: translateY(100%);
-      opacity: 0;
-  }
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* Apply the animations to an element */
-.dropdown-content {
-  animation: rollIn 0.5s ease forwards; /* Roll in on hover */
-}
-
