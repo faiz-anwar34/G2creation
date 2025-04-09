@@ -1,7 +1,11 @@
-body { 
+html, body {
+  height: 100%; /* Ensure the body takes up the full height of the viewport */
   margin: 0;
-  padding: 0;
-  height: 100%;
+  display: flex;
+  flex-direction: column; /* Make the body a flex container */
+}
+
+body { 
   overflow-x: hidden;
   background: url(../imagee/pexels-jessbaileydesign-1097930.jpg) no-repeat center center;
   background-size: cover; /* Ensures the image covers the entire screen */
@@ -9,27 +13,26 @@ body {
   background-attachment: fixed; /* Keeps the background fixed while scrolling */
 }
 
-@media (max-width: 768px) {
-  body {
-    background: url(../imagee/pexels-jessbaileydesign-1097930.jpg) no-repeat center center;
-    background-size: cover;
-    background-attachment: scroll;
-  }
-  
-  
-}
 
 @media (max-width: 480px) {
   body {
-    background: url(../imagee/pexels-jessbaileydesign-1097930.jpg) no-repeat center center;
-    background-size: cover; /* Ensures the image fits within the screen on very small devices */
-    background-attachment: scroll; /* Prevents issues with fixed backgrounds on mobile */
+    background: url(../imagee/Untitled\ design.png) no-repeat center center;
+    background-size: cover; 
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+}
+
+@media (max-width: 480px) {
+  html, body {
+    overflow: hidden; /* Disable scrolling in both x and y directions */
   }
-}@media (max-width: 480px) {
+
   .footer {
     font-size: 0.8rem; /* Adjust font size for smaller screens */
     padding: 15px 5px; /* Reduce padding for smaller screens */
-margin-bottom: 0%;
+    margin-bottom: 0%;
   }
 }
 
@@ -103,6 +106,7 @@ margin-bottom: 0%;
 }
 
 .main-content {
+  flex: 1; /* Allow the main content to grow and take up available space */
   display: none;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -186,46 +190,47 @@ margin-bottom: 0%;
 .nav-slide ul li a:hover {
   text-decoration: underline;
 }
+
 .banner {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 20px auto;
-width: 80%;
-max-width: 800px;
-perspective: 1000px; /* For 3D effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  perspective: 1000px; /* For 3D effect */
 }
 
 .banner img {
-width: 100%;
-height: auto;
-border-radius: 15px;
-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5);
-
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .footer {
-background-color: #333;
-color: #fff;
-text-align: center;
-padding: 20px 10px;
-font-family: Arial, sans-serif;
-font-size: 0.9rem;
-position:relative; /* Sticks the footer to the bottom */
-bottom: 0;
-left: 0;
-width: 100%;
-z-index: 10;
-display: none; /* Initially hidden */
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 20px 10px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  position: relative; /* No need for absolute positioning */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: none; /* Initially hidden */
 }
 
 .footer a {
-color: #00bcd4;
-text-decoration: none;
+  color: #00bcd4;
+  text-decoration: none;
 }
 
 .footer a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .main-content.visible + .footer {
