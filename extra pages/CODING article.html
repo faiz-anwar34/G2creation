@@ -1,23 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <header>
-        <b><h1>G²Creations</h1></b>
-    </header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unlocking the Power of Coding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --bg-color-light: #ffffff;
+            --text-color-light: #000000;
+            --bg-color-dark: #121212;
+            --text-color-dark: #ffffff;
+            --accent-color: #007bff;
+        }
+
+        body {
+            font-family: "Tinos", serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('../imagee/pexels-tirachard-kumtanom-112571-733852.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--text-color-light);
+            transition: background-color 0.3s, color 0.3s;
+        
+            font-size: 18px;
+        }
+
+        header { display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 150px;}
+   header h1,.head {
+  user-select: none;
+  border: 2px solid rgb(0, 0, 0);
+   border-radius: 10px;
+   box-shadow: 5px 5px 5px rgb(117, 117, 117);
+   padding: 10px;
+   font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+   }
+        h1 {
+            margin: 0;
+            font-family: "Indie Flower", cursive;
+            font-weight: 400;
+        }
+
+        main {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--bg-color-light);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2, h3 {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+       
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle i {
+            pointer-events: none;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            main {
+                width: 95%;
+            }
+
+            aside {
+                display: none;
+            }
+        }
+        
+        li{
+            font-weight: 400;
+        }
+        .watermark {
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            main {
+                width: 95%;
+            }
+            body {
+                overflow-x: hidden;
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="image"></div>
-      <h2 style="    box-shadow: 5px 5px 5px rgb(229, 229, 229);
-      border: 2px solid rgb(188, 188, 188);
-      padding: 20px 0;
-      width: 100%;
-      padding-left: 30%;
-      font-style: normal;
-      text-align: left;overflow: hidden;">Unlocking the Power of Coding</h2>
+    <header>
+        <h1>G²Creations</h1>
+    </header>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-adjust"></i>
+    </button>
     <main>
+        <h2>Unlocking the Power of Coding</h2>
         <section id="introduction">
             <p>In today's digital age, coding has become more than just a technical skill—it's a language that empowers individuals to create, innovate, and solve problems in a multitude of industries. From software development to data analysis, web design to artificial intelligence, coding serves as the backbone of modern technology. In this article, we'll delve into the significance of coding, explore the essential skills it encompasses, and discuss its diverse applications across various fields.</p>
             <h3>Understanding Coding:</h3>
@@ -48,122 +172,26 @@
         </section>
         <h3>Conclusion</h3><p>In conclusion, coding is not just a technical skill; it's a gateway to endless possibilities and opportunities. By mastering coding skills, individuals can unlock the power to create, innovate, and shape the future of technology. Whether you aspire to become a software engineer, data scientist, web developer, or AI specialist, coding proficiency is a valuable asset that opens doors to a wide range of career paths and possibilities. So, embrace the challenge, sharpen your skills, and embark on a journey of discovery and innovation through the world of coding.</p>
     </main>
-    <aside>
-        <h2>Other Pages</h2>
-        <ul>
-            <li><a href="../extra pages/aboutus.html">About us</a></li>
-            <li><a href="../extra pages/aboutus.html">About AI</a></li>
-            <li><a href="../extra pages/TOXIC CULTURE.html">Toxic culture</a></li>
-            <li><a href="../extra pages/FOCUS article.html">About focus</a></li>
-            <li><a href="../index.html">Home Page</a></li>
-        </ul>
-    </aside>
+    <div class="watermark">
+        Powered by AI | Designed with ❤️ by G²Creations
+    </div>
+    <script>
+        const root = document.documentElement;
 
+        function toggleTheme() {
+            const isDarkMode = root.style.getPropertyValue('--bg-color-light') === '#121212';
+            if (isDarkMode) {
+                root.style.setProperty('--bg-color-light', '#ffffff');
+                root.style.setProperty('--text-color-light', '#000000');
+                root.style.setProperty('--bg-color-dark', '#121212');
+                root.style.setProperty('--text-color-dark', '#ffffff');
+            } else {
+                root.style.setProperty('--bg-color-light', '#121212');
+                root.style.setProperty('--text-color-light', '#ffffff');
+                root.style.setProperty('--bg-color-dark', '#ffffff');
+                root.style.setProperty('--text-color-dark', '#000000');
+            }
+        }
+    </script>
 </body>
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-         overflow-x: hidden;
-            align-items: center;
-            background-image: url(../imagee/pexels-tirachard-kumtanom-112571-733852.jpg);
-            background-repeat: no-repeat; 
-        background-size: cover;background-attachment: fixed;
-        } 
-             
-h1{
-    user-select: none;
-  border: 2px solid rgb(0, 0, 0);
-   border-radius: 10px;
-   box-shadow: 5px 5px 5px rgb(117, 117, 117);
-   padding: 10px;
-   font-family: "Indie Flower", cursive;
-   font-weight: 400;
-   font-style: normal;
-}
-
-        
-
-        main {
-            right: 30%;
-            top: 25%;
-            left:10%;
-            display: flex;
-           position: absolute;
-            flex-direction: column;
-            padding: 20px;
-            text-align: left;
-           
-            
-        }
-
-        section {
-            margin-bottom: 0px;
-            text-align: center;
-            padding: 0px;
-            
-        }
-
-        h3 {
-            color: #333;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-    aside {
-        position: fixed;
-font-size: larger;
-    top: 50%;
-    right: 70px;
-    transform: translateY(-50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgb(255, 0, 0);
-      
-        }
-
-        aside a {
-            color: white;
-            text-decoration: none;
-        }
-
-        aside h3 {
-            color: white;
-            font-size: 20px;
-        }
-  
-
-    /* Responsive Styles */
-    @media only screen and (max-width: 600px) {
-        header {
-            padding: 10px 0;
-        }
-
-        main ,section {
-            font-size: 14px;
-            left: 0%;
-            right: 0%;
-            text-align: left;
-        }
-
-
-        aside {
-        display: none;
-        }
-        body{
-            overflow-x: hidden;
-        }
-    }
-</style>
 </html>

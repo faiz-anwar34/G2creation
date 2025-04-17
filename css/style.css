@@ -16,7 +16,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    background: url(../imagee/Untitled\ design.png) no-repeat center center;
+    background: url(../imagee/Untitled\ design.jpg) no-repeat center center;
     background-size: cover; 
   overflow: hidden;
   overflow-x: hidden;

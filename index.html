@@ -16,12 +16,12 @@
   </div>
 
   <div class="main-content" id="mainContent">
-    <img style="user-select: none;" src="./imagee/Screenshot_8-4-2025_195151_www.canva.com-removebg-preview.png" alt="Header Image"> <!-- Add your image here -->
+    <img style="user-select: none;" src="./imagee/Screenshot_8-4-2025_195151_www.canva.com-removebg-preview.png" loading="lazy" alt="Header Image"> <!-- Add your image here -->
     <div class="banner">
       <div class="slides">
-      <img src="./imagee/banner.png" alt="Banner Image"> 
-      <img src="./imagee/2.jpg" alt="Banner 2">
-      <img src="./imagee/2.jpg" alt="Banner 3">
+      <img src="./imagee/banner.jpg" loading="lazy" alt="Banner Image"> 
+      <img src="./imagee/2.jpg" loading="lazy" alt="Banner 2">
+      <img src="./imagee/2.jpg" loading="lazy" alt="Banner 3">
     </div>
     <button class="prev-btn" id="prevBtn">&#10094;</button>
     <button class="next-btn" id="nextBtn">&#10095;</button>
@@ -52,80 +52,7 @@
     <p>Contact us: <a href="faizanwar23122006@gmail.com">faizanwar23122006@gmail.com</a></p>
     <p>&copy; 2025 G²Creations. All rights reserved.</p>
   </footer>
-  <script>
-    const welcomeScreen = document.getElementById('welcomeScreen');
-    const mainContent = document.getElementById('mainContent');
-    const viewMoreBtn = document.getElementById('viewMoreBtn');
-    const navMenu = document.querySelector('.nav-menu');
-    const footer = document.querySelector('.footer');
-
-    viewMoreBtn.addEventListener('click', () => {
-      // Slide the welcome screen up
-      welcomeScreen.classList.add('hidden');
-
-      // Wait for the slide-up animation to complete
-      setTimeout(() => {
-        welcomeScreen.style.display = 'none';
-        mainContent.classList.add('visible');
-        navMenu.classList.add('visible'); // Show the navigation menu
-        footer.style.display = 'block'; // Show the footer
-      }, 1000); // Match the CSS transition duration
-    });
-
-    const slides = document.querySelector('.slides');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentIndex = 0;
-    const slideImages = document.querySelectorAll('.slides img');
-    const totalSlides = slideImages.length;
-
-    // Clone the first and last slides for seamless looping
-    const firstClone = slideImages[0].cloneNode(true);
-    const lastClone = slideImages[totalSlides - 1].cloneNode(true);
-
-    // Add clones to the beginning and end of the slides
-    slides.appendChild(firstClone);
-    slides.insertBefore(lastClone, slideImages[0]);
-
-    // Adjust the initial position to show the first slide
-    slides.style.transform = `translateX(-100%)`;
-
-    function updateSlidePosition() {
-      slides.style.transition = 'transform 0.5s ease-in-out';
-      slides.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
-    }
-
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex >= totalSlides - 1) {
-        // If it's the last slide, reset to the first slide
-        currentIndex++;
-        updateSlidePosition();
-        setTimeout(() => {
-          slides.style.transition = 'none';
-          slides.style.transform = `translateX(-100%)`;
-          currentIndex = 0;
-        }, 500); // Match the transition duration
-      } else {
-        currentIndex++;
-        updateSlidePosition();
-      }
-    });
-
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex <= 0) {
-        // If it's the first slide, reset to the last slide
-        currentIndex--;
-        updateSlidePosition();
-        setTimeout(() => {
-          slides.style.transition = 'none';
-          slides.style.transform = `translateX(-${totalSlides * 100}%)`;
-          currentIndex = totalSlides - 1;
-        }, 500); // Match the transition duration
-      } else {
-        currentIndex--;
-        updateSlidePosition();
-      }
-    });
-  </script>
+  
 </body>
+<script src="./js/index.js"></script>
 </html>
