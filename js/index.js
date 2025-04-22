@@ -1,4 +1,30 @@
-const welcomeScreen = document.getElementById('welcomeScreen');
+document.addEventListener("DOMContentLoaded", () => { //Navigation
+  const navLinks = [
+    { text: "Home", href: "#mainContent" },
+    { text: "About", href: "./extra pages/aboutus.html" },
+    { text: "Ai Article", href: "./extra pages/aiarticle.html" },
+    { text: "Toxic Culture", href: "./extra pages/Toxicculture.html" },
+    { text: "Coding Article", href: "./extra pages/codingarticle.html" },
+    { text: "Focus", href: "./extra pages/Focusarticle.html" },
+    { text: "Edit", href: "./Lyrical by Js/main.html" },
+    { text: "Voiceover", href: "./extra pages/voiceover.html" },
+    { text: "Feedback", href: "./extra pages/form.html" },
+  ];
+
+  const navLinksContainer = document.getElementById("navLinks");
+
+  navLinks.forEach(link => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.textContent = link.text;
+    a.href = link.href;
+     a.target = "_blank"
+    li.appendChild(a);
+    navLinksContainer.appendChild(li);
+  });
+});
+
+const welcomeScreen = document.getElementById('welcomeScreen');//welcomescreen
 const mainContent = document.getElementById('mainContent');
 const viewMoreBtn = document.getElementById('viewMoreBtn');
 const navMenu = document.querySelector('.nav-menu');
