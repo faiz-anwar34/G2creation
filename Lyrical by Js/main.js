@@ -80,26 +80,6 @@ const lyricsElement = document.getElementById("lyrics");
 let currentLine = 0;
 let isPlaying = false;
 
-// Create an orientation lock message
-const orientationMessage = document.createElement("div");
-orientationMessage.id = "orientationMessage";
-orientationMessage.innerText = "Please rotate your device to landscape mode for the best experience.";
-document.body.appendChild(orientationMessage);
-
-// Function to check device orientation
-function checkOrientation() {
-    if (window.innerHeight > window.innerWidth) {
-        // Show the orientation message if in portrait mode
-        orientationMessage.style.display = "flex";
-    } else {
-        // Hide the orientation message if in landscape mode
-        orientationMessage.style.display = "none";
-    }
-}
-
-// Check orientation on load and on resize
-window.addEventListener("load", checkOrientation);
-window.addEventListener("resize", checkOrientation);
 
 // Function to start the video, music, and lyrics
 function startApp() {
